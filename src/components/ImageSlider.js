@@ -25,7 +25,7 @@ const ImageSlider = () => {
       <div className="max-w-4xl mx-auto relative">
         
         {/* Image */}
-        <div className="w-full h-[300px] md:h-[450px] overflow-hidden rounded-lg">
+        <div className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-lg">
           <img
             src={slides[current].img}
             alt={slides[current].caption}

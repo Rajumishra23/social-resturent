@@ -17,7 +17,7 @@ const Navbar = () => {
 
 
         {/* Nav Links */}
-        <nav className="flex items-center font-semibold gap-5">
+        <nav className="flex items-center font-semibold gap-7">
           <a href="/" className="hover:text-yellow-400">HOME</a>
         <a href="/Social Club" className="hover:text-yellow-400">SOCIAL CLUB</a>
         <a href="/Social work" className="hover:text-yellow-400">SOCIAL WORK</a>

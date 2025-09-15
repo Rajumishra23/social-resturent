@@ -23,7 +23,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-[350px] overflow-hidden">
+    <section className="relative w-full h-[450px] overflow-hidden">
       {/* Image */}
       <div
         className="w-full h-full bg-cover bg-center"
