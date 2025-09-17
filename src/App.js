@@ -5,7 +5,7 @@ import CouponSection from './components/CouponSection'
 import LoyaltySection from './components/LoyaltySection'
 import SocialPages from './components/SocialPage'
 import ImageSlider from './components/ImageSlider'
-import LocationSection from './components/LocationSection'
+import InstagramSection from './components/InstagramSection'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
       <LoyaltySection/>
       <SocialPages/>
       <ImageSlider/>
-      <LocationSection/>
+      <InstagramSection/>
       <Footer/>
       
     </div>

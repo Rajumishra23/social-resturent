@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 const ImageSlider = () => {
   const slides = [
     { img: "/bar1.webp", caption: "Neon Nights" },
-{ img: "/bar2.webp", caption: "Signature Cocktails" },
-{ img: "/bar3.webp", caption: "Live DJ Party" },
-{ img: "/bar4.webp", caption: "Dance & Vibes" },
-{ img: "/bar5.webp", caption: "Midnight Specials" },
-
+    { img: "/bar2.webp", caption: "Signature Cocktails" },
+    { img: "/bar3.webp", caption: "Live DJ Party" },
+    { img: "/bar4.webp", caption: "Dance & Vibes" },
+    { img: "/bar5.webp", caption: "Midnight Specials" },
   ];
 
   const [current, setCurrent] = useState(0);
@@ -21,25 +20,24 @@ const ImageSlider = () => {
   }, [slides.length]);
 
   return (
-    <section className="w-full bg-black py-10">
-      <div className="max-w-4xl mx-auto relative">
-        
+    <section className="w-full bg-black">
+      <div className="relative w-full h-[70vh] md:h-[90vh]">
         {/* Image */}
-        <div className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-lg">
-          <img
-            src={slides[current].img}
-            alt={slides[current].caption}
-            className="w-full h-full object-cover transition-all duration-700"
-          />
+        <img
+          src={slides[current].img}
+          alt={slides[current].caption}
+          className="w-full h-full object-cover transition-all duration-700"
+        />
+
+        {/* Caption (Overlay Center) */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+          <p className="text-white text-xl md:text-2xl font-semibold bg-black/50 px-4 py-2 rounded-lg">
+            {slides[current].caption}
+          </p>
         </div>
 
-        {/* Caption */}
-        <p className="text-center text-white mt-4 text-lg font-medium">
-          {slides[current].caption}
-        </p>
-
         {/* Dots */}
-        <div className="flex justify-center mt-4 space-x-2">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -50,16 +48,18 @@ const ImageSlider = () => {
             ></button>
           ))}
         </div>
-         {/* Paragraph below dots */}
-<p className="text-center text-gray-200 mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed tracking-wide">
-  <span className="font-semibold text-yellow-400">SOCIAL</span> is where work meets play, 
-  where mundane blends with the extraordinary and where conversations are free flowing. <br /><br />
-  <span className="italic text-gray-300">
-    It’s a reflection of the passion, vibrance and energy that connects neighbourhoods across India.
-  </span>
-</p>
+      </div>
 
-
+      {/* Paragraph below slider */}
+      <div className="max-w-3xl mx-auto px-4 py-8 text-center">
+        <p className="text-gray-200 text-sm md:text-base leading-relaxed tracking-wide">
+          <span className="font-semibold text-yellow-400">SOCIAL</span> is where work meets play, 
+          where mundane blends with the extraordinary and where conversations are free flowing. 
+          <br /><br />
+          <span className="italic text-gray-300">
+            It’s a reflection of the passion, vibrance and energy that connects neighbourhoods across India.
+          </span>
+        </p>
       </div>
     </section>
   );
