@@ -28,15 +28,15 @@ const InstagramSection = () => {
         <h1 className="text-white text-3xl md:text-4xl font-bold mt-2">
           INSTAGRAM VIDEOS
         </h1>
-        <p className="text-gray-400 text-sm md:text-base mt-3 max-w-2xl mx-auto">
+        <p className="text-gray-400 text-sm md:text-base mt-3 max-w-3xl mx-auto">
           Get a sneak peek of the Social vibe straight from our Instagram reels!
         </p>
       </div>
 
       {/* Slider Container */}
-      <div className="max-w-5xl mx-auto relative">
+      <div className="w-full max-w-7xl mx-auto relative px-4">
         {/* Video */}
-        <div className="w-full h-[500px] sm:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+        <div className="w-full h-[550px] md:h-[700px] rounded-2xl overflow-hidden shadow-xl">
           <video
             src={videos[current]}
             autoPlay
@@ -53,7 +53,7 @@ const InstagramSection = () => {
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-3 h-3 rounded-full transition ${
                 current === index ? "bg-orange-500" : "bg-gray-500"
               }`}
             ></button>

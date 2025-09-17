@@ -35,7 +35,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-[550px] overflow-hidden">
+    <section className="relative w-full h-[600px] overflow-hidden">
       {/* ✅ Slides container */}
       <div
         className="flex w-full h-full transition-transform duration-700"
