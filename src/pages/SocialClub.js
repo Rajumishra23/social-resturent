@@ -4,29 +4,30 @@ const SocialClub = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* ✅ Top Section with Orange Background */}
-      <div className="bg-orange-500 bg-cover bg-center">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-6 md:px-16 py-16 text-white">
-          {/* Left - Big Heading */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-6xl md:text-7xl font-extrabold leading-tight">
-              THE <br />
-              SOCIAL <br />
-              CLUB
-            </h1>
-          </div>
+      <div className="bg-orange-500 bg-cover bg-center mt-20">
+  <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-6 md:px-16 py-16 text-white">
+    {/* Left - Big Heading */}
+    <div className="md:w-1/2 text-center md:text-left">
+      <h1 className="text-6xl md:text-7xl font-extrabold leading-tight">
+        THE <br />
+        SOCIAL <br />
+        CLUB
+      </h1>
+    </div>
 
-          {/* Right - Subtext */}
-          <div className="md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Eat. Drink. Reward. Repeat.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed">
-              We know you love hanging out at SOCIAL – so why not get rewarded
-              for it? Welcome to the SOCIAL Club, our all-new loyalty program!
-            </p>
-          </div>
-        </div>
-      </div>
+    {/* Right - Subtext */}
+    <div className="md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-bold">
+        Eat. Drink. Reward. Repeat.
+      </h2>
+      <p className="mt-6 text-lg leading-relaxed">
+        We know you love hanging out at SOCIAL – so why not get rewarded
+        for it? Welcome to the SOCIAL Club, our all-new loyalty program!
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* ✅ Black Tabs Section */}
       <div className="bg-black text-center border-t border-gray-800">
