@@ -2,32 +2,28 @@ import React, { useState, useEffect } from "react";
 
 const HeroSlider = () => {
   const images = [
-    "/rest.webp",  // pehla image
+    "/rest.webp",
     "/rest1.webp",
     "/club.webp",
     "/club1.webp",
-    "/club2.webp", // dusra image
+    "/club2.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // ✅ Auto Slide (every 3 sec)
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // 3 sec me slide change hoga
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-  // Left button click
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  // Right button click
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -35,7 +31,16 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-[600px] overflow-hidden">
+    <section
+      className="
+        relative w-full 
+        h-[500px]    /* 📱 Mobile default */
+        sm:h-[500px] /* 📲 Small screens */
+        md:h-[600px] /* 💻 Medium */
+        lg:h-[700px] /* 🖥 Desktop */
+        overflow-hidden
+      "
+    >
       {/* ✅ Slides container */}
       <div
         className="flex w-full h-full transition-transform duration-700"
@@ -59,7 +64,7 @@ const HeroSlider = () => {
       {/* Left Button */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded hover:bg-black"
+        className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/60 text-white px-4 py-3 rounded-full hover:bg-black text-xl sm:text-2xl"
       >
         ❮
       </button>
@@ -67,7 +72,7 @@ const HeroSlider = () => {
       {/* Right Button */}
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded hover:bg-black"
+        className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white px-4 py-3 rounded-full hover:bg-black text-xl sm:text-2xl"
       >
         ❯
       </button>
