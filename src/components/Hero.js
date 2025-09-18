@@ -37,7 +37,7 @@ const HeroSlider = () => {
         h-[500px]    /* 📱 Mobile default */
         sm:h-[500px] /* 📲 Small screens */
         md:h-[600px] /* 💻 Medium */
-        lg:h-[1000px] /* 🖥 Desktop */
+        lg:h-[800px] /* 🖥 Desktop */
         overflow-hidden
       "
     >
