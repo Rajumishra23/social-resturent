@@ -1,30 +1,40 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import HeroSlider from './components/Hero'
-import CouponSection from './components/CouponSection'
-import LoyaltySection from './components/LoyaltySection'
-import SocialPages from './components/SocialPage'
-import ImageSlider from './components/ImageSlider'
-import InstagramSection from './components/InstagramSection'
-import Footer from './components/Footer'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import OrderPopup from "./components/OrderPopup";   // ✅ Popup import
+
+// ✅ Pages
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import SocialClub from "./pages/SocialClub";
+import SocialWork from "./pages/SocialWork";
+import Order from "./pages/Order";
+import Event from "./pages/Event";
+import Reserve from "./pages/Reserve";
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <HeroSlider/>
-      <CouponSection/>
-      <br></br>
-      
-      <hr></hr>
-      <LoyaltySection/>
-      <SocialPages/>
-      <ImageSlider/>
-      <InstagramSection/>
-      <Footer/>
-      
-    </div>
-  )
-}
+    <Router>
+      {/* ✅ Popup sabse pehle show hoga */}
+      <OrderPopup />
 
-export default App
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/social-club" element={<SocialClub />} />
+        <Route path="/social-work" element={<SocialWork />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/reserve" element={<Reserve />} />
+      </Routes>
+
+      <Footer />
+    </Router>
+  );
+};
+
+export default App;

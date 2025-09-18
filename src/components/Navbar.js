@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navLinkClass = ({ isActive }) =>
+    isActive
+      ? "text-amber-700 font-bold border-b-2 border-amber-700"
+      : "hover:text-yellow-400";
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
@@ -20,21 +26,21 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center font-semibold gap-7">
-          <a href="/" className="hover:text-yellow-400">HOME</a>
-          <a href="/Social Club" className="hover:text-yellow-400">SOCIAL CLUB</a>
-          <a href="/Social work" className="hover:text-yellow-400">SOCIAL WORK</a>
-          <a href="/About" className="hover:text-yellow-400">ABOUT</a>
-          <a href="/Order" className="hover:text-yellow-400">ORDER</a>
-          <a href="/Event" className="hover:text-yellow-400">EVENT</a>
+          <NavLink to="/" className={navLinkClass}>HOME</NavLink>
+          <NavLink to="/social-club" className={navLinkClass}>SOCIAL CLUB</NavLink>
+          <NavLink to="/social-work" className={navLinkClass}>SOCIAL WORK</NavLink>
+          <NavLink to="/about" className={navLinkClass}>ABOUT</NavLink>
+          <NavLink to="/order" className={navLinkClass}>ORDER</NavLink>
+          <NavLink to="/event" className={navLinkClass}>EVENT</NavLink>
         </nav>
 
         {/* Reserve Table Button (Desktop) */}
-        <a
-          href="/reserve"
+        <NavLink
+          to="/reserve"
           className="hidden md:inline-block bg-amber-700 text-white font-semibold px-5 py-2 rounded-full shadow hover:bg-amber-800 transition"
         >
           Reserve Table
-        </a>
+        </NavLink>
 
         {/* Mobile Hamburger Icon */}
         <button
@@ -48,21 +54,21 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg px-6 py-6 flex flex-col items-center space-y-6">
-          <a href="/" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>HOME</a>
-          <a href="/Social Club" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>SOCIAL CLUB</a>
-          <a href="/Social work" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>SOCIAL WORK</a>
-          <a href="/About" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>ABOUT</a>
-          <a href="/Order" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>ORDER</a>
-          <a href="/Event" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>EVENT</a>
+          <NavLink to="/" className={navLinkClass} onClick={() => setIsOpen(false)}>HOME</NavLink>
+          <NavLink to="/social-club" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL CLUB</NavLink>
+          <NavLink to="/social-work" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL WORK</NavLink>
+          <NavLink to="/about" className={navLinkClass} onClick={() => setIsOpen(false)}>ABOUT</NavLink>
+          <NavLink to="/order" className={navLinkClass} onClick={() => setIsOpen(false)}>ORDER</NavLink>
+          <NavLink to="/event" className={navLinkClass} onClick={() => setIsOpen(false)}>EVENT</NavLink>
 
           {/* Mobile Button */}
-          <a
-            href="/reserve"
+          <NavLink
+            to="/reserve"
             className="bg-amber-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-amber-800 transition"
             onClick={() => setIsOpen(false)}
           >
             Reserve Table
-          </a>
+          </NavLink>
         </div>
       )}
     </header>
