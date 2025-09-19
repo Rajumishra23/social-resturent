@@ -5,33 +5,32 @@ const SocialClub = () => {
     <div className="min-h-screen bg-black text-white">
       {/* ✅ Top Section with Orange Background */}
       <div className="bg-orange-500 bg-cover bg-center mt-20">
-  <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-6 md:px-16 py-16 text-white">
-    {/* Left - Big Heading */}
-    <div className="md:w-1/2 text-center md:text-left">
-      <h1 className="text-6xl md:text-7xl font-extrabold leading-tight">
-        THE <br />
-        SOCIAL <br />
-        CLUB
-      </h1>
-    </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-4 sm:px-6 md:px-16 py-10 sm:py-14 md:py-16 text-white">
+          {/* Left - Big Heading */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
+              THE <br />
+              SOCIAL <br />
+              CLUB
+            </h1>
+          </div>
 
-    {/* Right - Subtext */}
-    <div className="md:w-1/2 mt-8 md:mt-0 text-center md:text-left">
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Eat. Drink. Reward. Repeat.
-      </h2>
-      <p className="mt-6 text-lg leading-relaxed">
-        We know you love hanging out at SOCIAL – so why not get rewarded
-        for it? Welcome to the SOCIAL Club, our all-new loyalty program!
-      </p>
-    </div>
-  </div>
-</div>
-
+          {/* Right - Subtext */}
+          <div className="md:w-1/2 mt-6 sm:mt-8 md:mt-0 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              Eat. Drink. Reward. Repeat.
+            </h2>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
+              We know you love hanging out at SOCIAL – so why not get rewarded
+              for it? Welcome to the SOCIAL Club, our all-new loyalty program!
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* ✅ Black Tabs Section */}
       <div className="bg-black text-center border-t border-gray-800">
-        <div className="flex flex-wrap justify-center gap-10 py-4 text-white font-semibold text-sm md:text-base">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 py-3 sm:py-4 text-white font-semibold text-xs sm:text-sm md:text-base">
           <a href="#tiers" className="hover:text-orange-400">
             LOYALTY TIERS
           </a>
@@ -50,9 +49,9 @@ const SocialClub = () => {
       {/* ✅ Loyalty Tiers Intro Section */}
       <div
         id="tiers"
-        className="px-6 md:px-20 py-16 bg-gray-900 text-center space-y-12"
+        className="px-4 sm:px-6 md:px-20 py-10 sm:py-14 md:py-16 bg-gray-900 text-center space-y-10 sm:space-y-12"
       >
-        <p className="max-w-3xl mx-auto text-lg leading-relaxed">
+        <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
           You now get rewarded every time you hangout at SOCIAL. Redeem them on
           your favourite <span className="text-orange-400">#eats</span>,{" "}
           <span className="text-orange-400">#drnks</span> or{" "}
@@ -61,42 +60,24 @@ const SocialClub = () => {
         </p>
 
         {/* Tiers (Text Style) */}
-        <div className="flex flex-wrap justify-center items-center gap-10">
-          {/* Tier 1 */}
-          <div className="text-center">
-            <p className="mb-2 font-bold">TIER 1</p>
-            <div className="text-4xl font-extrabold">
-              {"["} <span className="text-orange-500">INSIDER</span> {"]"}
+        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10">
+          {[
+            { tier: "TIER 1", label: "INSIDER" },
+            { tier: "TIER 2", label: "VIP" },
+            { tier: "TIER 3", label: "VVIP" },
+            { tier: "TIER 4", label: "ALL ACCESS" },
+          ].map((t, idx) => (
+            <div key={idx} className="text-center">
+              <p className="mb-2 font-bold text-sm sm:text-base">{t.tier}</p>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
+                {"["} <span className="text-orange-500">{t.label}</span> {"]"}
+              </div>
             </div>
-          </div>
-
-          {/* Tier 2 */}
-          <div className="text-center">
-            <p className="mb-2 font-bold">TIER 2</p>
-            <div className="text-4xl font-extrabold">
-              {"["} <span className="text-orange-500">VIP</span> {"]"}
-            </div>
-          </div>
-
-          {/* Tier 3 */}
-          <div className="text-center">
-            <p className="mb-2 font-bold">TIER 3</p>
-            <div className="text-4xl font-extrabold">
-              {"["} <span className="text-orange-500">VVIP</span> {"]"}
-            </div>
-          </div>
-
-          {/* Tier 4 */}
-          <div className="text-center">
-            <p className="mb-2 font-bold">TIER 4</p>
-            <div className="text-4xl font-extrabold">
-              {"["} <span className="text-orange-500">ALL ACCESS</span> {"]"}
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Info Paragraphs */}
-        <div className="space-y-6 max-w-4xl mx-auto text-base md:text-lg">
+        <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-sm sm:text-base md:text-lg">
           <p>
             Every time you dine-in from Social you are eligible for discounts
             and benefits based on your Tier level – Insider, VIP Member, VVIP
@@ -114,85 +95,54 @@ const SocialClub = () => {
       </div>
 
       {/* ✅ Loyalty Tier Cards */}
-      <div className="px-6 md:px-20 py-16 bg-black text-center space-y-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+      <div className="px-4 sm:px-6 md:px-20 py-10 sm:py-14 md:py-16 bg-black text-center space-y-10 sm:space-y-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
           LOYALTY TIERS
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Tier 1 */}
-          <div className="border border-orange-500">
-            <div className="bg-orange-600 py-3 font-bold uppercase">
-              Tier 1: Insider
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {[
+            {
+              title: "Tier 1: Insider",
+              freq: "1 - 2",
+              spend: "INR 1 - 4,999",
+            },
+            {
+              title: "Tier 2: VIP Member",
+              freq: "3 - 4",
+              spend: "INR 5,000 - 19,999",
+            },
+            {
+              title: "Tier 3: VVIP Member",
+              freq: "5 - 8",
+              spend: "INR 20,000 - 1,00,000",
+            },
+            {
+              title: "Tier 4: All Access",
+              freq: "9 and above",
+              spend: "Above INR 1,00,000",
+            },
+          ].map((tier, idx) => (
+            <div key={idx} className="border border-orange-500">
+              <div className="bg-orange-600 py-2 sm:py-3 font-bold uppercase text-xs sm:text-sm md:text-base">
+                {tier.title}
+              </div>
+              <div className="bg-black p-4 sm:p-6 space-y-3 text-xs sm:text-sm md:text-base">
+                <p>
+                  Required Monthly Average Frequency:{" "}
+                  <span className="text-orange-400">{tier.freq}</span>
+                </p>
+                <p>
+                  Required Monthly Average Spend:{" "}
+                  <span className="text-orange-400">{tier.spend}</span>
+                </p>
+              </div>
             </div>
-            <div className="bg-black p-6 space-y-4 text-sm">
-              <p>
-                Required Monthly Average Frequency:{" "}
-                <span className="text-orange-400">1 - 2</span>
-              </p>
-              <p>
-                Required Monthly Average Spend:{" "}
-                <span className="text-orange-400">INR 1 - 4,999</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Tier 2 */}
-          <div className="border border-orange-500">
-            <div className="bg-orange-600 py-3 font-bold uppercase">
-              Tier 2: VIP Member
-            </div>
-            <div className="bg-black p-6 space-y-4 text-sm">
-              <p>
-                Required Monthly Average Frequency:{" "}
-                <span className="text-orange-400">3 - 4</span>
-              </p>
-              <p>
-                Required Monthly Average Spend:{" "}
-                <span className="text-orange-400">INR 5,000 - 19,999</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Tier 3 */}
-          <div className="border border-orange-500">
-            <div className="bg-orange-600 py-3 font-bold uppercase">
-              Tier 3: VVIP Member
-            </div>
-            <div className="bg-black p-6 space-y-4 text-sm">
-              <p>
-                Required Monthly Average Frequency:{" "}
-                <span className="text-orange-400">5 - 8</span>
-              </p>
-              <p>
-                Required Monthly Average Spend:{" "}
-                <span className="text-orange-400">
-                  INR 20,000 - 1,00,000
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Tier 4 */}
-          <div className="border border-orange-500">
-            <div className="bg-orange-600 py-3 font-bold uppercase">
-              Tier 4: All Access
-            </div>
-            <div className="bg-black p-6 space-y-4 text-sm">
-              <p>
-                Required Monthly Average Frequency:{" "}
-                <span className="text-orange-400">9 and above</span>
-              </p>
-              <p>
-                Required Monthly Average Spend:{" "}
-                <span className="text-orange-400">Above INR 1,00,000</span>
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* ✅ Benefits & Rewards Section */}
+       {/* ✅ Benefits & Rewards Section */}
 <div
   id="rewards"
   className="px-6 md:px-20 py-16 bg-gray-900 text-center space-y-12"
