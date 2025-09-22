@@ -15,7 +15,7 @@ const Navbar = () => {
       {/* Overlay for better contrast */}
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
 
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+      <div className="relative max-w-7xl mx-auto flex items-center justify-between px-2 py-1">
         {/* Logo */}
         <div className="flex flex-col items-center">
           <img
