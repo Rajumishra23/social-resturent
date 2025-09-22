@@ -28,7 +28,7 @@ const SocialPages = () => {
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               The Instagram page with every fun update about your creative neighbourhood place.
             </p>
-            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-white hover:text-black transition">
+            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-orange-500 hover:text-black transition">
               FOLLOW THE PAGE
             </button>
           </div>
@@ -41,7 +41,7 @@ const SocialPages = () => {
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               The Instagram page to keep tabs on all upcoming events & gigs.
             </p>
-            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-white hover:text-black transition">
+            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-orange-500 hover:text-black transition">
               FOLLOW THE PAGE
             </button>
           </div>
@@ -54,7 +54,7 @@ const SocialPages = () => {
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               Our WhatsApp Community Channel will help you keep a closer eye on EVERYTHING SOCIAL!
             </p>
-            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-white hover:text-black transition">
+            <button className="bg-[#1a1a1a] text-white px-6 py-3 rounded-full font-bold tracking-wide hover:bg-orange-500 hover:text-black transition">
               JOIN THE CHANNEL
             </button>
           </div>
