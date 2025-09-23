@@ -12,16 +12,15 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Overlay for better contrast - now covers full width */}
+      <div className="absolute inset-0 w-full h-full bg-black/30 backdrop-blur-sm -z-10"></div>
       <div className="relative max-w-7xl mx-auto flex items-center justify-between px-2 py-1">
-        {/* Overlay for better contrast */}
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm -z-10"></div>
-
         {/* Logo */}
         <div className="flex flex-col items-center">
           <img
             src="logo.webp"
             alt="Pulp The Delicacy Logo"
-            className="w-60 h-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] rounded-xl"
+            className="w-32 h-16 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] rounded-xl"
           />
         </div>
 

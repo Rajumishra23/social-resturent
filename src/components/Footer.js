@@ -8,11 +8,11 @@ const Footer = () => {
         
         {/* Logo & Social Icons */}
         <div className="flex flex-col items-center">
-          <img
-            src="logo.webp"
-            alt="Pulp The Delicacy Logo"
-            className="w-60 h-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] rounded-xl"
-          />
+  <img
+    src="logo.webp"
+    alt="Pulp The Delicacy Logo"
+    className="w-32 h-16 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] rounded-xl"
+  />
           <div className="flex gap-4 mt-6">
             <a
               href="#"
