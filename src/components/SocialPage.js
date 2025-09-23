@@ -23,7 +23,7 @@ const SocialPages = () => {
           {/* Card 1 */}
           <div className="bg-black border border-gray-500 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-lg transition">
             <h3 className="text-orange-500 text-xl font-extrabold tracking-wider mb-4">
-              @SOCIAL.OFFLINE
+              @PULP.OFFLINE
             </h3>
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               The Instagram page with every fun update about your creative neighbourhood place.
@@ -36,7 +36,7 @@ const SocialPages = () => {
           {/* Card 2 */}
           <div className="bg-black border border-gray-500 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-lg transition">
             <h3 className="text-orange-500 text-xl font-extrabold tracking-wider mb-4">
-              @LIVE.AT.SOCIAL
+              @LIVE.AT.PULP
             </h3>
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               The Instagram page to keep tabs on all upcoming events & gigs.

@@ -6,12 +6,14 @@ const Footer = () => {
     <footer className="bg-black text-white pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
         
-        {/* Logo + Social Icons */}
-        <div>
-          <h2 className="text-orange-500 text-5xl font-extrabold tracking-wider">
-            SOCIAL
-          </h2>
-          <div className="flex items-center gap-6 mt-6">
+        {/* Logo & Social Icons */}
+        <div className="flex flex-col items-center">
+          <img
+            src="logo.webp"
+            alt="Pulp The Delicacy Logo"
+            className="w-60 h-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] rounded-xl"
+          />
+          <div className="flex gap-4 mt-6">
             <a
               href="#"
               className="p-4 bg-neutral-800 rounded-full hover:bg-orange-500 transition text-2xl"
