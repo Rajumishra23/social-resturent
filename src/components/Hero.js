@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const HeroSlider = () => {
   const slides = [
     { src: "/pixel1.webp" },
-    { src: "/resturent1.webp" },
     { src: "/pixel2.webp" },
     { src: "/resturent2.webp" },
+    { src: "/resturent1.webp" },
     
     
     
