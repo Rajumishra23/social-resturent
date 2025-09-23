@@ -12,10 +12,10 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Overlay for better contrast */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-
       <div className="relative max-w-7xl mx-auto flex items-center justify-between px-2 py-1">
+        {/* Overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm -z-10"></div>
+
         {/* Logo */}
         <div className="flex flex-col items-center">
           <img
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gradient-to-br from-orange-100 via-yellow-200 to-amber-200 shadow-xl px-6 py-6 flex flex-col items-center space-y-6 rounded-b-3xl animate-slideDown">
+        <div className="md:hidden bg-gradient-to-br from-orange-100 via-yellow-200 to-amber-200 shadow-xl px-6 py-6 flex flex-col items-center space-y-6 rounded-b-3xl animate-slideDown z-50">
           <NavLink to="/" className={navLinkClass} onClick={() => setIsOpen(false)}>HOME</NavLink>
           <NavLink to="/social-club" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL CLUB</NavLink>
           <NavLink to="/social-work" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL WORK</NavLink>
