@@ -10,7 +10,7 @@ const SocialClub = () => {
           <div className="md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
               THE <br />
-              SOCIAL <br />
+              PLUP <br />
               CLUB
             </h1>
           </div>
@@ -21,7 +21,7 @@ const SocialClub = () => {
             </h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
               We know you love hanging out at SOCIAL – so why not get rewarded
-              for it? Welcome to the SOCIAL Club, our all-new loyalty program!
+              for it? Welcome to the PLUP Club, our all-new loyalty program!
             </p>
           </div>
         </div>
