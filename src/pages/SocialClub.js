@@ -1,319 +1,72 @@
 import React from "react";
 
-const SocialClub = () => {
+const MenuSection = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* ✅ Top Section with Orange Background */}
-      <div className="bg-orange-500 bg-cover bg-center mt-20">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-4 sm:px-6 md:px-16 py-10 sm:py-14 md:py-16 text-white">
-          {/* Left - Big Heading */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
-              THE <br />
-              PLUP <br />
-              CLUB
-            </h1>
-          </div>
-          {/* Right - Subtext */}
-          <div className="md:w-1/2 mt-6 sm:mt-8 md:mt-0 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Eat. Drink. Reward. Repeat.
-            </h2>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
-              We know you love hanging out at SOCIAL – so why not get rewarded
-              for it? Welcome to the PLUP Club, our all-new loyalty program!
-            </p>
-          </div>
-        </div>
-      </div>
+    <>
+      {/* Banner Section */}
+      <section className="relative bg-[url('/menu.webp')] bg-cover bg-center h-96 flex items-center justify-center">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* ✅ Black Tabs Section */}
-      <div className="bg-black text-center border-t border-gray-800">
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 py-3 sm:py-4 text-white font-semibold text-xs sm:text-sm md:text-base">
-          <a href="#tiers" className="hover:text-orange-400">
-            LOYALTY TIERS
-          </a>
-          <a href="#rewards" className="hover:text-orange-400">
-            BENEFITS & REWARDS
-          </a>
-          <a href="#faqs" className="hover:text-orange-400">
-            FAQS
-          </a>
-          <a href="#terms" className="hover:text-orange-400">
-            TERMS & CONDITIONS
-          </a>
-        </div>
-      </div>
-
-      {/* ✅ Loyalty Tiers Intro Section */}
-      <div
-        id="tiers"
-        className="px-4 sm:px-6 md:px-20 py-10 sm:py-14 md:py-16 bg-gray-900 text-center space-y-10 sm:space-y-12"
-      >
-        <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
-          You now get rewarded every time you hangout at SOCIAL. Redeem them on
-          your favourite <span className="text-orange-400">#eats</span>,{" "}
-          <span className="text-orange-400">#drnks</span> or{" "}
-          <span className="text-orange-400">#community</span> events. Get access
-          to exclusive discounts and benefits, as you level up in the program.
-        </p>
-
-        {/* Tiers (Text Style) */}
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10">
-          {[
-            { tier: "TIER 1", label: "INSIDER" },
-            { tier: "TIER 2", label: "VIP" },
-            { tier: "TIER 3", label: "VVIP" },
-            { tier: "TIER 4", label: "ALL ACCESS" },
-          ].map((t, idx) => (
-            <div key={idx} className="text-center">
-              <p className="mb-2 font-bold text-sm sm:text-base">{t.tier}</p>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
-                {"["} <span className="text-orange-500">{t.label}</span> {"]"}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Info Paragraphs */}
-        <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-sm sm:text-base md:text-lg">
-          <p>
-            Every time you dine-in from Social you are eligible for discounts
-            and benefits based on your Tier level – Insider, VIP Member, VVIP
-            Member and All Access.
-          </p>
-          <p>
-            You will be enrolled into the program as an Insider, and get
-            upgraded once your spends exceed the defined brackets.
-          </p>
-          <p>
-            As you level up, you’ll have access to exclusive benefits and
-            discounts!
-          </p>
-        </div>
-      </div>
-
-      {/* ✅ Loyalty Tier Cards */}
-      <div className="px-4 sm:px-6 md:px-20 py-10 sm:py-14 md:py-16 bg-black text-center space-y-10 sm:space-y-12">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
-          LOYALTY TIERS
+        {/* Heading */}
+        <h2 className="relative text-5xl md:text-6xl font-extrabold text-white text-center">
+          Our Menu
         </h2>
+      </section>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {[
-            {
-              title: "Tier 1: Insider",
-              freq: "1 - 2",
-              spend: "INR 1 - 4,999",
-            },
-            {
-              title: "Tier 2: VIP Member",
-              freq: "3 - 4",
-              spend: "INR 5,000 - 19,999",
-            },
-            {
-              title: "Tier 3: VVIP Member",
-              freq: "5 - 8",
-              spend: "INR 20,000 - 1,00,000",
-            },
-            {
-              title: "Tier 4: All Access",
-              freq: "9 and above",
-              spend: "Above INR 1,00,000",
-            },
-          ].map((tier, idx) => (
-            <div key={idx} className="border border-orange-500">
-              <div className="bg-orange-600 py-2 sm:py-3 font-bold uppercase text-xs sm:text-sm md:text-base">
-                {tier.title}
+      {/* Menu Grid Section */}
+      <section className="w-full bg-black text-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4">
+         
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+            {[
+              { img: "pulp1.jpg", label: "Special Dish 1" },
+              { img: "pulp2.jpg", label: "Special Dish 2" },
+              { img: "pulp3.jpg", label: "Special Dish 3" },
+              { img: "pulp4..jpg", label: "Special Dish 4" },
+              { img: "pulp5.jpg", label: "Special Dish 5" },
+              { img: "pulp6.jpg", label: "Special Dish 6" },
+              { img: "pulp7.jpg", label: "Special Dish 7" },
+              { img: "pulp8.jpg", label: "Special Dish 8" },
+              { img: "pulp9.jpg", label: "Special Dish 9" },
+              { img: "pulp10.jpg", label: "Refreshing Drinks" },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="relative rounded-xl overflow-hidden border4 w-full h-80 md:h-100" 
+                style={{ borderColor: "yellow" }}
+              >
+                {/* Image */}
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+                {/* Label */}
+                <div className="absolute top-3 left-3">
+                  <span
+                    className="px-3 py-1 rounded-full text-sm font-semibold"
+                    style={{
+                      backgroundColor: "rgba(212,175,55,0.95)",
+                      color: "#1a1a1a",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                </div>
               </div>
-              <div className="bg-black p-4 sm:p-6 space-y-3 text-xs sm:text-sm md:text-base">
-                <p>
-                  Required Monthly Average Frequency:{" "}
-                  <span className="text-orange-400">{tier.freq}</span>
-                </p>
-                <p>
-                  Required Monthly Average Spend:{" "}
-                  <span className="text-orange-400">{tier.spend}</span>
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-
-       {/* ✅ Benefits & Rewards Section */}
-<div
-  id="rewards"
-  className="px-6 md:px-20 py-16 bg-gray-900 text-center space-y-12"
->
-  <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-    BENEFITS & REWARDS
-  </h2>
-
-  {/* Top Buttons */}
-  <div className="flex flex-wrap justify-center gap-4 mb-8">
-    <button className="bg-orange-600 text-white px-4 py-2 rounded font-semibold">
-      DINE-IN
-    </button>
-    <button className="bg-black text-white px-4 py-2 rounded font-semibold border border-gray-700">
-      SPENDS MILESTONES
-    </button>
-    <button className="bg-black text-white px-4 py-2 rounded font-semibold border border-gray-700">
-      VISIT MILESTONES
-    </button>
-  </div>
-
-  {/* Table */}
-  <div className="overflow-x-auto">
-    <table className="min-w-full border border-gray-700 text-sm">
-      <thead className="bg-orange-600 text-white">
-        <tr>
-          <th className="px-4 py-2 border border-gray-700">Benefit</th>
-          <th className="px-4 py-2 border border-gray-700">Insider</th>
-          <th className="px-4 py-2 border border-gray-700">VIP</th>
-          <th className="px-4 py-2 border border-gray-700">VVIP</th>
-          <th className="px-4 py-2 border border-gray-700">All Access</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="bg-black">
-          <td className="px-4 py-3 border border-gray-700">
-            Flat discount on bill (via coupon)
-          </td>
-          <td className="px-4 py-3 border border-gray-700">10% (MOV 1500)</td>
-          <td className="px-4 py-3 border border-gray-700">Flat 15%</td>
-          <td className="px-4 py-3 border border-gray-700">Flat 20%</td>
-          <td className="px-4 py-3 border border-gray-700">Flat 25%</td>
-        </tr>
-        <tr>
-          <td className="px-4 py-3 border border-gray-700">Physical Card</td>
-          <td className="px-4 py-3 border border-gray-700">N</td>
-          <td className="px-4 py-3 border border-gray-700">N</td>
-          <td className="px-4 py-3 border border-gray-700">Y</td>
-          <td className="px-4 py-3 border border-gray-700">Y</td>
-        </tr>
-        <tr className="bg-black">
-          <td className="px-4 py-3 border border-gray-700">
-            Physical Card Dispatch
-          </td>
-          <td className="px-4 py-3 border border-gray-700">NA</td>
-          <td className="px-4 py-3 border border-gray-700">NA</td>
-          <td className="px-4 py-3 border border-gray-700">
-            Will be sent via post
-          </td>
-          <td className="px-4 py-3 border border-gray-700">
-            Need to provide your details to us, we’ll reach out to you
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-     {/* ✅ FAQs Section */}
-<div
-  id="faqs"
-  className="px-6 md:px-20 py-16 bg-black text-center space-y-12"
->
-  <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-    FAQS
-  </h2>
-
-  <div className="max-w-3xl mx-auto space-y-6 text-left">
-    {/* Q1 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        How can I Sign Up?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        You are automatically enrolled as an Insider when you start dining with us.
-      </p>
-    </div>
-
-    {/* Q2 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        How many tiers are there in The Social Club?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        There are four tiers – Insider, VIP Member, VVIP Member, and All Access.
-      </p>
-    </div>
-
-    {/* Q3 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        How to maintain ALL ACCESS status?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        Maintain the required monthly average spends and visits to keep your All Access tier.
-      </p>
-    </div>
-
-    {/* Q4 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        Where can I see my rewards?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        You can view your rewards in your Social Club account dashboard.
-      </p>
-    </div>
-
-    {/* Q5 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        When do my coupon rewards get added to my account?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        Coupon rewards are added within 24 hours of your eligible transaction.
-      </p>
-    </div>
-
-    {/* Q6 */}
-    <div className="border-b border-gray-800 pb-4">
-      <h3 className="font-bold text-lg text-orange-400">
-        Is there a monthly/yearly membership fee to join The Social Club?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        No, joining The Social Club is free of cost.
-      </p>
-    </div>
-
-    {/* Q7 */}
-    <div>
-      <h3 className="font-bold text-lg text-orange-400">
-        I'm already an existing Social customer. How do I know which Tier I'm in?
-      </h3>
-      <p className="text-gray-300 mt-2">
-        Your current tier is visible in your Social Club account profile.
-      </p>
-    </div>
-  </div>
-</div>
-
-      {/* ✅ Terms & Conditions Section */}
-      <div id="terms" className="px-6 md:px-20 py-16 bg-black text-center space-y-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold">TERMS & CONDITIONS</h2>
-        <div className="max-w-4xl mx-auto text-left space-y-4 text-white font-bold">
-          <p>1. Membership is free and automatic upon your first dine-in.</p>
-          <p>2. Tier upgrades are calculated monthly based on average spends.</p>
-          <p>3. Benefits are subject to availability and may change without notice.</p>
-          <p>4. SOCIAL reserves the right to modify or cancel the program at any time.</p>
-          <p>5. SOCIAL reserves the right to modify or cancel the program at any time.</p>
-          <p>6.To redeem your coupons, visit your neighbourhood SOCIAL. Scan the QR code on your table,
-             login with your mobile number and redeem your available coupons</p>
-          <p>7.Some offers can only be redeemed offline, please request the server for this and they will do the required</p>
-          <p>8.The birthday offer is only available if you have previously shared your date of birth with us.
-             We regularly send out profile completion forms to update your social profile. Once you share your details with us,
-             the birthday offer will get unlocked and available to redeem via the QR code across all Social outlets</p>
-          <p>9.The validity of coupons accumulated in any calendar year will vary for each coupon</p>
-          <p>10.Only one coupon can be redeemed in one order</p>
-          <p>11.Milestone offers are limited to one redemption per month.</p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
-export default SocialClub;
+export default MenuSection;

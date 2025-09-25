@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 const ImageSlider = () => {
   const slides = [
-    { img: "/bar1.webp", caption: "Neon Nights" },
-    { img: "/bar2.webp", caption: "Signature Cocktails" },
-    { img: "/bar3.webp", caption: "Live DJ Party" },
-    { img: "/bar4.webp", caption: "Dance & Vibes" },
-    { img: "/bar5.webp", caption: "Midnight Specials" },
+    { img: "/1.jpg", caption: "Neon Nights" },
+    { img: "/2.jpg", caption: "Signature Cocktails" },
+    { img: "3.jpg", caption: "Live DJ Party" },
+    { img: "4.jpg", caption: "Dance & Vibes" },
+    { img: "5.jpg", caption: "Midnight Specials" },
   ];
 
   const [current, setCurrent] = useState(0);

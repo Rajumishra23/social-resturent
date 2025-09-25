@@ -8,6 +8,7 @@ const HeroSlider = () => {
     { src: "/food3.webp", caption: "Taste The Difference" },
     { src: "/pixel1.webp", caption: "Reserve Your Table Now" },
     { src: "/food2.webp", caption: "Free Home delivery" },
+    { src: "/3.jpg", caption: "lets Drink" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,7 +71,7 @@ const HeroSlider = () => {
               </NavLink>
               <NavLink
                 to="/reserve"
-                className="px-6 py-3 bg-transparent border-2 border-yellow-500 text-yellow-500 font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition-all"
+                className="px-6 py-3 bg-white border-2 border-yellow-500 text-black-500 font-semibold rounded-full hover:bg-white hover:text-black transition-all"
               >
                 Reserve Now
               </NavLink>
