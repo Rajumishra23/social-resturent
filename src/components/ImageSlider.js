@@ -53,7 +53,7 @@ const ImageSlider = () => {
       {/* Paragraph below slider */}
       <div className="max-w-3xl mx-auto px-4 py-8 text-center">
         <p className="text-gray-200 text-sm md:text-base leading-relaxed tracking-wide">
-          <span className="font-semibold text-yellow-400">SOCIAL</span> is where work meets play, 
+          <span className="font-semibold text-yellow-400">PULP</span> is where work meets play, 
           where mundane blends with the extraordinary and where conversations are free flowing. 
           <br /><br />
           <span className="italic text-gray-300">

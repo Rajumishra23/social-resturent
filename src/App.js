@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import OrderPopup from "./components/OrderPopup"; // ✅ Popup import
+import OrderPopup from "./components/OrderPopup";
 import { FaArrowUp } from "react-icons/fa";
-
-// ✅ Pages
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import SocialClub from "./pages/SocialClub";
@@ -15,7 +13,6 @@ import Order from "./pages/Order";
 import Event from "./pages/Event";
 import Reserve from "./pages/Reserve";
 
-// Scroll to top on route change
 const ScrollToTopOnRouteChange = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {
@@ -23,8 +20,6 @@ const ScrollToTopOnRouteChange = () => {
   }, [pathname]);
   return null;
 };
-
-// Scroll-to-top button
 const ScrollToTopButton = () => {
   const [visible, setVisible] = React.useState(false);
 

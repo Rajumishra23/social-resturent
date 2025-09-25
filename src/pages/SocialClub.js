@@ -1,42 +1,60 @@
 import React from "react";
 
 const MenuSection = () => {
+  const menuItems = [
+   { img: "pulp1.jpg" },
+    { img: "pulp2.jpg" },
+    { img: "pulp3.jpg" },
+    { img: "pulp4..jpg" },
+    { img: "pulp5.jpg" },
+    { img: "pulp6.jpg" },
+    { img: "pulp7.jpg" },
+    { img: "pulp8.jpg" },
+    { img: "pulp9.jpg" },
+    { img: "pulp10.jpg" },
+  ];
+
+
   return (
     <>
       {/* Banner Section */}
       <section className="relative bg-[url('/menu.webp')] bg-cover bg-center h-96 flex items-center justify-center">
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Heading */}
         <h2 className="relative text-5xl md:text-6xl font-extrabold text-white text-center">
           Our Menu
         </h2>
       </section>
 
-      {/* Menu Grid Section */}
+      {/* Menu Section */}
       <section className="w-full bg-black text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
-         
+          {/* Title */}
+          <h2
+            className="text-center text-4xl md:text-5xl font-extrabold mb-6 tracking-wide"
+            style={{ color: "#D4AF37" }}
+          >
+            Explore Our Dishes
+          </h2>
+
+          {/* Introductory Content */}
+          <p className="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+            At <span className="text-yellow-400 font-semibold">Dasaprakash</span>, 
+            our menu is a symphony of flavors crafted with passion. From 
+            <span className="text-yellow-400"> appetizers</span> that awaken your taste buds, 
+            to <span className="text-yellow-400">main courses</span> that celebrate tradition 
+            and innovation, and <span className="text-yellow-400">desserts</span> that end your 
+            meal on a sweet note — every dish is made with fresh ingredients 
+            and authentic recipes. Pair it with our <span className="text-yellow-400">refreshing drinks</span> 
+            for the perfect dining experience.
+          </p>
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
-            {[
-              { img: "pulp1.jpg", label: "Special Dish 1" },
-              { img: "pulp2.jpg", label: "Special Dish 2" },
-              { img: "pulp3.jpg", label: "Special Dish 3" },
-              { img: "pulp4..jpg", label: "Special Dish 4" },
-              { img: "pulp5.jpg", label: "Special Dish 5" },
-              { img: "pulp6.jpg", label: "Special Dish 6" },
-              { img: "pulp7.jpg", label: "Special Dish 7" },
-              { img: "pulp8.jpg", label: "Special Dish 8" },
-              { img: "pulp9.jpg", label: "Special Dish 9" },
-              { img: "pulp10.jpg", label: "Refreshing Drinks" },
-            ].map((item, idx) => (
+            {menuItems.map((item, idx) => (
               <div
                 key={idx}
-                className="relative rounded-xl overflow-hidden border4 w-full h-80 md:h-100" 
-                style={{ borderColor: "yellow" }}
+                className="relative rounded-xl overflow-hidden border w-full h-80 md:h-96"
+                style={{ borderColor: "#D4AF37" }}
               >
                 {/* Image */}
                 <img
@@ -49,13 +67,9 @@ const MenuSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
                 {/* Label */}
-                <div className="absolute top-3 left-3">
+                <div className="absolute bottom-3 left-3">
                   <span
                     className="px-3 py-1 rounded-full text-sm font-semibold"
-                    style={{
-                      backgroundColor: "rgba(212,175,55,0.95)",
-                      color: "#1a1a1a",
-                    }}
                   >
                     {item.label}
                   </span>

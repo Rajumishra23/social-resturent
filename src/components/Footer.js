@@ -55,10 +55,11 @@ const Footer = () => {
         {/* Company Info */}
         <div className="text-lg text-gray-400 leading-relaxed">
           <p>
-            Impresario Entertainment & Hospitality Private Limited,
-            American Express Bakery House, 1st Floor, Victoria Bakery Bldg,
-            Dr. B. Ambedkar Road, Bandra (W), Mumbai, Maharashtra 400050.
+            Block 26-D, Inner Cir, D Block, Connaught Place, New Delhi, Delhi 110001
           </p>
+
+            Phone: <a href="tel:+9108510006888</a>" className="hover:text-orange-500">08510006888</a>
+          
         </div>
       </div>
 
