@@ -5,6 +5,7 @@ import LoyaltySection from "../components/LoyaltySection";
 import SocialPages from "../components/SocialPage";
 import ImageSlider from "../components/ImageSlider";
 import InstagramSection from "../components/InstagramSection";
+import SpecialsSection from "../components/SpecialSections";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <hr />
       <LoyaltySection />
       <SocialPages />
+      <SpecialsSection/>
       <ImageSlider />
       <InstagramSection />
     </div>

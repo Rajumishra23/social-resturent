@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const navLinkClass = ({ isActive }) =>
     isActive
-      ? "bg-gradient-to-r from-orange-400 to-amber-700 text-white font-bold px-4 py-1 rounded-full shadow-md transition border-2 border-white"
+      ? "bg-white text-black font-bold px-4 py-1 rounded-full shadow-md transition border-2 border-white"
       : "hover:bg-orange-100 hover:text-amber-700 px-4 py-1 rounded-full transition";
 
   return (
@@ -27,9 +27,8 @@ const Navbar = () => {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center font-semibold gap-5 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
           <NavLink to="/" className={navLinkClass}>HOME</NavLink>
-          <NavLink to="/social-club" className={navLinkClass}>SOCIAL CLUB</NavLink>
-          <NavLink to="/social-work" className={navLinkClass}>SOCIAL WORK</NavLink>
           <NavLink to="/about" className={navLinkClass}>ABOUT</NavLink>
+          <NavLink to="/social-club" className={navLinkClass}>MENU</NavLink>
           <NavLink to="/order" className={navLinkClass}>ORDER</NavLink>
           <NavLink to="/event" className={navLinkClass}>EVENT</NavLink>
         </nav>
@@ -55,9 +54,8 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-gradient-to-br from-orange-100 via-yellow-200 to-amber-200 shadow-xl px-6 py-6 flex flex-col items-center space-y-6 rounded-b-3xl animate-slideDown z-50">
           <NavLink to="/" className={navLinkClass} onClick={() => setIsOpen(false)}>HOME</NavLink>
-          <NavLink to="/social-club" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL CLUB</NavLink>
-          <NavLink to="/social-work" className={navLinkClass} onClick={() => setIsOpen(false)}>SOCIAL WORK</NavLink>
           <NavLink to="/about" className={navLinkClass} onClick={() => setIsOpen(false)}>ABOUT</NavLink>
+          <NavLink to="/social-club" className={navLinkClass} onClick={() => setIsOpen(false)}>MENU</NavLink>
           <NavLink to="/order" className={navLinkClass} onClick={() => setIsOpen(false)}>ORDER</NavLink>
           <NavLink to="/event" className={navLinkClass} onClick={() => setIsOpen(false)}>EVENT</NavLink>
 
